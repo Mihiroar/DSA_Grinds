@@ -70,12 +70,12 @@
 //   return 0;
 // }
 
-//Above all we learnt class(inside this data/props/attributes and methods/member functions),objects,access specifiers, setter and getter functions in C++.
+// Above all we learnt class(inside this data/props/attributes and methods/member functions),objects,access specifiers, setter and getter functions in C++.
 
-//Encapsulation concept beloe:
-// #include <iostream>
-// #include <string>
-// using namespace std;
+// Encapsulation concept beloe:
+//  #include <iostream>
+//  #include <string>
+//  using namespace std;
 
 // class Account {
 //   private:
@@ -87,11 +87,10 @@
 //   string username;
 // };
 
-
-//Shallow and Deep Copy
-// #include <iostream>
-// #include <string>
-// using namespace std;
+// Shallow and Deep Copy
+//  #include <iostream>
+//  #include <string>
+//  using namespace std;
 
 // class Student {
 //   public:
@@ -114,7 +113,7 @@
 //   void getInfo() {
 //     cout << "name : " << name << endl;
 //     cout << "cgpa : " << *cgpaPtr << endl;
-//   } 
+//   }
 // };
 
 // int main() {
@@ -130,7 +129,7 @@
 //   return 0;
 // }
 
-//Destructor
+// Destructor
 
 // #include <iostream>
 // #include <string>
@@ -155,7 +154,7 @@
 //   void getInfo() {
 //     cout << "name : " << name << endl;
 //     cout << "cgpa : " << *cgpaPtr << endl;
-//   } 
+//   }
 // };
 
 // int main() {
@@ -163,3 +162,285 @@
 //   s1.getInfo();
 //   return 0;
 // }
+
+// Inheritance
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Person
+// {
+// public:
+//   string name;
+//   int age;
+
+//   Person(string name, int age)
+//   {
+//     this->name = name;
+//     this->age = age;
+//   }
+
+//   //   Person() {
+//   //     cout << "I am parent constructor\n";
+//   //   }
+// };
+
+// class Student : public Person
+// {
+// public:
+//   int rollno;
+
+//   Student(string name, int age, int rollno) : Person(name, age)
+//   {
+//     this->rollno = rollno;
+//   }
+
+//   void getInfo()
+//   {
+//     cout << "name : " << name << endl;
+//     cout << "age : " << age << endl;
+//     cout << "rollno : " << rollno << endl;
+//   }
+// };
+
+// int main()
+// {
+//   // s1.name = "rahul kumar";
+//   // s1.age = 22;
+//   // s1.rollno = 1234;
+//   Student s1("rahul kumar", 21, 1234);
+
+//   s1.getInfo();
+//   return 0;
+// }
+
+// Multi - level
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Person
+// {
+// public:
+//   string name;
+//   int age;
+// };
+
+// class Student : public Person
+// {
+// public:
+//   int rollno;
+// };
+
+// class GradStudent : public Student{
+//   public:
+//   string researchArea;
+// };
+
+// int main()
+// {
+//   GradStudent s1;
+//   s1.name = "tony stark";
+//   s1.researchArea = "AI";
+//   cout << s1.name << endl;
+//   cout << s1.researchArea << endl;
+//   return 0;
+// }
+
+
+// multiple inheritance
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+
+// class Student{
+//   public:
+//   string name;
+//   int rollno;
+// };
+
+// class Teacher {
+//   public:
+//   string subject;
+//   double salary;
+// };
+
+// class TA : public Student, public Teacher {
+// };
+
+// int main()
+// {
+//   TA t1;
+//   t1.name = "tony stark";
+//   t1.subject = "engg";
+
+//   cout << t1.name << endl;
+//   cout << t1.subject << endl;
+//   return 0;
+// }
+
+//Hierarchical Inheritance
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Person {
+//   public:
+//   string name;
+//   int age;
+// };
+
+// class Student : public Person {
+//   public:
+//   int rollno;
+// };
+
+// class Teacher : public Person {
+//   public:
+//   string subject;
+// };
+
+
+//Polymorphism (Covering  example of constructor overloading which is compile time polymorphism)
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Student {
+//   public:
+//   string name;
+
+//   Student() {
+//     cout << "non-parameterized constructor\n";
+//   }
+//   Student(string name){
+//     this->name = name;
+//     cout << "parameterized constructor\n";
+//   }
+
+// };
+
+
+// int main()
+// {
+//   Student s1("rahul");
+//   return 0;
+// }
+
+// Function Overloading Example
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Print{
+//   public:
+//   void show(int x){
+//     cout << "int: " << x << endl;
+//   }
+
+//   void show(char ch){
+//     cout << "char: " << ch << endl;
+//   }
+// };
+
+
+// int main()
+// {
+//   Print p1;
+//   p1.show(10);
+//   p1.show('a');
+//   return 0;
+// }
+
+// Function Overriding Example of Run TIme Polymorphism
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Parent{
+//   public:
+//   void getInfo(){
+//     cout << "I am parent class\n";
+//   }
+// };
+
+// class Child : public Parent{
+//   public:
+//   void getInfo(){
+//     cout << "I am child class\n";
+//   }
+// };
+
+// int main(){
+//   // Child c1;
+//   // c1.getInfo();
+//   Parent p1;
+//   p1.getInfo();
+//   return 0;
+// }
+
+// Virtual Function example
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Parent{
+//   public:
+//   void getInfo(){
+//     cout << "I am parent class\n";
+//   }
+
+//   virtual void hello() {
+//     cout << "Hello from parent\n";
+//   }
+// };
+
+// class Child : public Parent{
+//   public:
+//   void getInfo(){
+//     cout << "I am child class\n";
+//   }
+
+//   void hello() {
+//     cout << "Hello from child\n";
+//   }
+// };
+
+// int main(){
+//   Child c1;
+//   c1.hello();
+//   return 0;
+// }
+
+// Abstract Class Implementation
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Shape {
+//   virtual void draw() = 0; //pure virtual function turns automatically class into abstract class
+// };
+
+// class Circle : public Shape {
+//   public:
+//   void draw(){
+//     cout << "Drawing Circle\n";
+//   }
+// };
+
+// int main(){
+//   Circle c1;
+//   c1.draw();
+//   return 0;
+// }
+
+// Static Keyword
