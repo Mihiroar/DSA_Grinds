@@ -443,4 +443,72 @@
 //   return 0;
 // }
 
-// Static Keyword
+// Static Keyword in function
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// void fun() {
+//   // int x = 0;
+//   static int x = 0; // Init statement will run once using static
+//   cout << "x : " << x << endl;
+//   x++;
+// }
+
+// int main () {
+//   fun();
+//   fun();
+//   fun();
+//   return 0;
+// }
+
+// Static keyword in class
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class A {
+//   public:
+//   int x;
+
+//   void incX() {
+//     x = x + 1;
+//   }
+// };
+
+
+// int main () {
+//   A obj1;
+//   A obj2;
+//   obj1.x = 100;
+//   obj2.x = 200;
+//   cout << obj1.x << endl;
+//   return 0;
+// }
+
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class ABC {
+//   public:
+//   ABC() {
+//     cout << "Constructor\n" << endl;
+//   }
+//   ~ABC() {
+//     cout << "Destructor\n" << endl;
+//   }
+// };
+
+
+// int main () {
+//   if(true) {
+//     static ABC obj; // Jaise hi if block se bahar aaye object delete hojayga
+//   }
+
+//   cout << "end of main fn\n";
+//   return 0;
+// }
