@@ -1,0 +1,9 @@
+{
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "*.jsx": "javascriptreact",
+    "*.tsx": "typescriptreact",
+    "iostream": "cpp"
+  }
+}
